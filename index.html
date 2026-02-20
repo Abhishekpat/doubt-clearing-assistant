@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Doubt Clearing Assistant</title>
+    <link rel="stylesheet" href="style.css">
+  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>E-Learning Doubt Clearing Assistant</h1>
+            <p class="subtitle">Ask any programming question and get instant contextual answers</p>
+        </header>
+
+        <main>
+            <div class="query-section">
+                <div class="input-group">
+                    <textarea
+                        id="questionInput"
+                        placeholder="Type your question here... (e.g., 'How do I use array methods?' or 'What is async await?')"
+                        rows="3"
+                    ></textarea>
+                    <button id="askButton" class="btn-primary">Ask Question</button>
+                </div>
+                <p id="errorMessage" class="error-message"></p>
+            </div>
+
+            <div id="answerSection" class="answer-section hidden">
+                <div class="answer-header">
+                    <h2 id="moduleTitle"></h2>
+                    <div class="confidence-badge">
+                        <span class="confidence-label">Confidence:</span>
+                        <span id="confidenceScore" class="confidence-score"></span>
+                    </div>
+                </div>
+                <div class="answer-content">
+                    <div class="explanation-section">
+                        <h3>Explanation</h3>
+                        <p id="explanation"></p>
+                    </div>
+                    <div class="example-section">
+                        <h3>Example</h3>
+                        <pre id="example"></pre>
+                    </div>
+                    <div class="keywords-section">
+                        <h3>Matched Keywords</h3>
+                        <div id="matchedKeywords" class="keywords-container"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <div class="history-header">
+                    <h2>Question History</h2>
+                    <button id="clearHistoryBtn" class="btn-secondary">Clear History</button>
+                </div>
+                <div id="historyList" class="history-list">
+                    <p class="no-history">No questions asked yet</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by intelligent keyword-based matching algorithm</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

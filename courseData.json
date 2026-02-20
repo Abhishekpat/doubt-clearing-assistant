@@ -1,0 +1,88 @@
+{
+  "modules": [
+    {
+      "id": 1,
+      "title": "Introduction to JavaScript Variables",
+      "keywords": ["variable", "var", "let", "const", "declaration", "assignment", "scope", "javascript"],
+      "explanation": "Variables in JavaScript are containers for storing data values. JavaScript has three ways to declare variables: var (function-scoped), let (block-scoped), and const (block-scoped and immutable). Understanding variable scope and hoisting is crucial for writing bug-free code.",
+      "example": "let studentName = 'John';\nconst age = 20;\nvar isEnrolled = true;\n\nconsole.log(studentName); // Output: John"
+    },
+    {
+      "id": 2,
+      "title": "Functions and Arrow Functions",
+      "keywords": ["function", "arrow", "return", "parameter", "argument", "callback", "anonymous", "expression"],
+      "explanation": "Functions are reusable blocks of code that perform specific tasks. JavaScript supports regular functions, arrow functions (ES6+), and function expressions. Arrow functions provide a shorter syntax and lexically bind 'this' context, making them ideal for callbacks.",
+      "example": "// Regular function\nfunction greet(name) {\n  return 'Hello ' + name;\n}\n\n// Arrow function\nconst greetArrow = (name) => `Hello ${name}`;\n\nconsole.log(greet('Alice')); // Hello Alice"
+    },
+    {
+      "id": 3,
+      "title": "Arrays and Array Methods",
+      "keywords": ["array", "map", "filter", "reduce", "foreach", "push", "pop", "slice", "splice", "iteration"],
+      "explanation": "Arrays are ordered collections of values. JavaScript provides powerful array methods like map (transform), filter (select), reduce (aggregate), forEach (iterate), and many more. These methods enable functional programming patterns and make data manipulation cleaner.",
+      "example": "const numbers = [1, 2, 3, 4, 5];\n\nconst doubled = numbers.map(n => n * 2);\nconst evens = numbers.filter(n => n % 2 === 0);\nconst sum = numbers.reduce((acc, n) => acc + n, 0);\n\nconsole.log(doubled); // [2, 4, 6, 8, 10]"
+    },
+    {
+      "id": 4,
+      "title": "Objects and Object-Oriented Programming",
+      "keywords": ["object", "property", "method", "class", "constructor", "this", "prototype", "inheritance", "oop"],
+      "explanation": "Objects are collections of key-value pairs. JavaScript supports object-oriented programming through prototypes and ES6 classes. Classes provide a cleaner syntax for creating objects and implementing inheritance. The 'this' keyword refers to the current object context.",
+      "example": "class Student {\n  constructor(name, grade) {\n    this.name = name;\n    this.grade = grade;\n  }\n  \n  study() {\n    return `${this.name} is studying`;\n  }\n}\n\nconst student = new Student('Emma', 'A');\nconsole.log(student.study());"
+    },
+    {
+      "id": 5,
+      "title": "Asynchronous JavaScript and Promises",
+      "keywords": ["async", "await", "promise", "then", "catch", "asynchronous", "callback", "fetch", "api"],
+      "explanation": "Asynchronous programming allows JavaScript to perform non-blocking operations. Promises represent future values and can be in three states: pending, fulfilled, or rejected. Async/await syntax makes asynchronous code look synchronous and easier to read.",
+      "example": "// Using Promises\nfetch('api/data')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error(error));\n\n// Using async/await\nasync function getData() {\n  const response = await fetch('api/data');\n  const data = await response.json();\n  return data;\n}"
+    },
+    {
+      "id": 6,
+      "title": "DOM Manipulation and Events",
+      "keywords": ["dom", "document", "element", "event", "listener", "click", "queryselector", "getelementbyid", "manipulation"],
+      "explanation": "The Document Object Model (DOM) is a programming interface for HTML documents. JavaScript can manipulate the DOM to change content, structure, and styling dynamically. Event listeners allow you to respond to user interactions like clicks, inputs, and key presses.",
+      "example": "// Select element\nconst button = document.querySelector('#myButton');\n\n// Add event listener\nbutton.addEventListener('click', () => {\n  console.log('Button clicked!');\n  button.textContent = 'Clicked!';\n});\n\n// Create new element\nconst newDiv = document.createElement('div');\nnewDiv.textContent = 'Hello World';"
+    },
+    {
+      "id": 7,
+      "title": "CSS Flexbox Layout",
+      "keywords": ["flexbox", "flex", "display", "justify-content", "align-items", "flex-direction", "layout", "responsive", "css"],
+      "explanation": "Flexbox is a one-dimensional layout system for arranging items in rows or columns. It provides powerful alignment and distribution capabilities. Key properties include display: flex, justify-content (main axis), align-items (cross axis), and flex-direction (row/column).",
+      "example": ".container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 20px;\n}\n\n.item {\n  flex: 1;\n  /* Each item takes equal space */\n}"
+    },
+    {
+      "id": 8,
+      "title": "CSS Grid Layout",
+      "keywords": ["grid", "css-grid", "template", "column", "row", "layout", "responsive", "area", "css"],
+      "explanation": "CSS Grid is a two-dimensional layout system for creating complex layouts. It divides space into rows and columns, allowing precise control over element placement. Grid is ideal for page layouts, while Flexbox works better for component-level layouts.",
+      "example": ".grid-container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-gap: 20px;\n}\n\n.grid-item {\n  grid-column: span 2;\n  /* Spans 2 columns */\n}"
+    },
+    {
+      "id": 9,
+      "title": "Local Storage and Session Storage",
+      "keywords": ["localstorage", "sessionstorage", "storage", "persist", "save", "retrieve", "data", "browser", "client"],
+      "explanation": "Web Storage API provides localStorage (persistent) and sessionStorage (session-only) for storing data in the browser. Data is stored as key-value pairs and persists even after page refreshes (localStorage) or during the session (sessionStorage). Maximum storage is typically 5-10MB.",
+      "example": "// Save to localStorage\nlocalStorage.setItem('username', 'John');\n\n// Retrieve from localStorage\nconst username = localStorage.getItem('username');\n\n// Save object (stringify)\nconst user = { name: 'John', age: 25 };\nlocalStorage.setItem('user', JSON.stringify(user));\n\n// Retrieve object (parse)\nconst savedUser = JSON.parse(localStorage.getItem('user'));"
+    },
+    {
+      "id": 10,
+      "title": "Error Handling and Debugging",
+      "keywords": ["error", "try", "catch", "finally", "throw", "debug", "console", "exception", "handling"],
+      "explanation": "Error handling prevents application crashes by gracefully managing exceptions. The try-catch-finally block allows you to catch errors and execute cleanup code. Console methods (log, error, warn, table) help debug issues. Throwing custom errors provides better error messages.",
+      "example": "try {\n  const data = JSON.parse(invalidJSON);\n  console.log(data);\n} catch (error) {\n  console.error('Parsing failed:', error.message);\n} finally {\n  console.log('Cleanup code runs always');\n}\n\n// Throw custom error\nif (age < 0) {\n  throw new Error('Age cannot be negative');\n}"
+    },
+    {
+      "id": 11,
+      "title": "ES6+ Modern JavaScript Features",
+      "keywords": ["es6", "destructuring", "spread", "rest", "template", "literal", "modern", "syntax", "javascript"],
+      "explanation": "ES6 (ECMAScript 2015) introduced powerful features that modernized JavaScript. Destructuring extracts values from arrays/objects, spread operator (...) expands iterables, template literals enable string interpolation, and rest parameters collect arguments into arrays.",
+      "example": "// Destructuring\nconst { name, age } = { name: 'Alice', age: 25 };\nconst [first, second] = [1, 2, 3];\n\n// Spread operator\nconst arr1 = [1, 2];\nconst arr2 = [...arr1, 3, 4]; // [1, 2, 3, 4]\n\n// Template literals\nconst greeting = `Hello ${name}, you are ${age} years old`;"
+    },
+    {
+      "id": 12,
+      "title": "HTTP Methods and RESTful APIs",
+      "keywords": ["http", "rest", "api", "get", "post", "put", "delete", "request", "response", "endpoint"],
+      "explanation": "HTTP methods define actions on resources. GET retrieves data, POST creates resources, PUT updates existing resources, DELETE removes resources. RESTful APIs use these methods with URL endpoints to create standardized interfaces. Status codes indicate success (200) or errors (404, 500).",
+      "example": "// GET request\nfetch('/api/users')\n  .then(res => res.json())\n  .then(data => console.log(data));\n\n// POST request\nfetch('/api/users', {\n  method: 'POST',\n  headers: { 'Content-Type': 'application/json' },\n  body: JSON.stringify({ name: 'John', email: 'john@example.com' })\n});"
+    }
+  ]
+}
