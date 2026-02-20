@@ -1,5 +1,8 @@
 # E-Learning Doubt Clearing Assistant
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Netlify-00C7B7?style=for-the-badge&logo=netlify)](https://cheery-kashata-e2ce6d.netlify.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/Abhishekpat/doubt-clearing-assistant)
+
 A context-aware doubt clearing assistant that helps students find instant answers to their programming questions without requiring any backend, AI APIs, or external services. Perfect for hackathons and educational demonstrations.
 
 ## Overview
@@ -94,8 +97,8 @@ Each module contains:
 
 1. **Download/Clone the project**
    ```bash
-   git clone <repository-url>
-   cd e-learning-assistant
+   git clone https://github.com/Abhishekpat/doubt-clearing-assistant.git
+   cd doubt-clearing-assistant
    ```
 
 2. **Open in browser**
@@ -199,9 +202,9 @@ Potential improvements for future versions:
 
 ## Demo
 
-**Live Demo**: [Insert your deployment URL here]
+**🌐 Live Demo**: [https://cheery-kashata-e2ce6d.netlify.app](https://cheery-kashata-e2ce6d.netlify.app)
 
-**Demo Video**: [Insert video link here]
+**📁 GitHub Repo**: [https://github.com/Abhishekpat/doubt-clearing-assistant](https://github.com/Abhishekpat/doubt-clearing-assistant)
 
 ## Browser Compatibility
 
